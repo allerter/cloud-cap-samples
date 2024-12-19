@@ -14,11 +14,19 @@
   },
   "dependencies": {
     "@sap/cds": ">=7",
+    "@sap/xssec": "^4.2.7",
     "express": "^4.17.1"
   },
   "scripts": {
     "genres": "cds serve test/genres.cds",
     "start": "cds-serve",
     "watch": "cds watch"
+  },
+  "cds": {
+    "requires": {
+      "[hybrid]": {
+        "auth": "xsuaa"
+      }
+    }
   }
 }

@@ -5,7 +5,8 @@
     "repository": "https://github.com/sap-samples/cloud-cap-samples.git",
     "author": "daniel.hutzel@sap.com",
     "dependencies": {
-        "@sap/cds": ">=8"
+        "@sap/cds": ">=8",
+        "@sap/xssec": "^4"
     },
     "workspaces": [
         "./bookshop",
@@ -47,5 +48,12 @@
         "timeout": 6666
     },
     "license": "SEE LICENSE IN LICENSE",
-    "private": true
+    "private": true,
+    "cds": {
+        "requires": {
+            "[hybrid]": {
+                "auth": "xsuaa"
+            }
+        }
+    }
 }
